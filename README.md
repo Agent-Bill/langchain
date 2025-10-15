@@ -1,15 +1,29 @@
 # AgentBill LangChain Integration
 
-Automatic usage tracking for LangChain applications.
+Automatic usage tracking and billing for LangChain applications.
+
+[![PyPI version](https://badge.fury.io/py/agentbill-langchain.svg)](https://pypi.org/project/agentbill-langchain/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
 
+Install via pip:
+
 ```bash
-pip install langchain langchain-openai
-# Copy agentbill_langchain/ to your project
+pip install agentbill-langchain
 ```
 
-## Usage
+With OpenAI support:
+```bash
+pip install agentbill-langchain[openai]
+```
+
+With Anthropic support:
+```bash
+pip install agentbill-langchain[anthropic]
+```
+
+## Quick Start
 
 ```python
 from agentbill_langchain import AgentBillCallback
@@ -26,3 +40,5 @@ callback = AgentBillCallback(
 llm = ChatOpenAI(callbacks=[callback])
 result = llm.invoke("Hello!")  # Auto-tracked!
 ```
+
+For full documentation, visit the [GitHub repository](https://github.com/Agent-Bill/langchain).
