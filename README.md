@@ -5,7 +5,7 @@ Automatic usage tracking for LangChain applications.
 ## Installation
 
 ```bash
-pip install agentbill-langchain
+pip install langchain langchain-openai
 # Copy agentbill_langchain/ to your project
 ```
 
@@ -26,6 +26,3 @@ callback = AgentBillCallback(
 llm = ChatOpenAI(callbacks=[callback])
 result = llm.invoke("Hello!")  # Auto-tracked!
 ```
-pip install agentbill-langchain[openai]
-
-pip install agentbill-langchain[anthropic]
